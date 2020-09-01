@@ -1,0 +1,13 @@
+{
+    "name": "intellij-keybindings",
+    "main": "./lib/inkdrop-intellij",
+    "version": "0.1.0",
+    "description": "IntelliJ keybindings",
+    "keywords": [],
+    "repository": "https://github.com/kitwtnb/inkdrop-intellij",
+    "license": "MIT",
+    "engines": {
+        "inkdrop": "^5.x"
+    },
+    "dependencies": {}
+}
