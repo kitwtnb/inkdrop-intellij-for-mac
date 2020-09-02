@@ -1,7 +1,7 @@
 {
     "name": "intellij-keybindings-for-mac",
     "main": "./lib/inkdrop-intellij-for-mac",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "IntelliJ keybindings for MacOS",
     "keywords": [],
     "repository": "https://github.com/kitwtnb/inkdrop-intellij-for-mac",
