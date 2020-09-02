@@ -1,6 +1,7 @@
 {
     "body": {},
     ".CodeMirror textarea": {
-        "cmd-/": "intellij:toggle-comment"
+        "cmd-/": "intellij:toggle-comment",
+        "cmd-backspace": "intellij:delete-line"
     }
 }

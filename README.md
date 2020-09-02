@@ -10,18 +10,15 @@ It's based on the [official key map](https://resources.jetbrains.com/storage/pro
 
 | Keystroke | Command                 |                                     |
 |-----------|-------------------------|-------------------------------------|
-| ⌘/        | intellij:toggle-comment | Comment/uncomment with line comment |
+| ⌘ /       | intellij:toggle-comment | Comment/uncomment with line comment |
+| ⌘ ⌫       | intellij:delete-line    | Delete line at caret                |
 
 ### Key customizations
 
-Default keymaps are defined [here](https://github.com/kitwtnb/inkdrop-intellij-for-mac/blob/master/keymaps/inkdrop-intellij-for-mac.json), and you can override them in your `keymap.cson` file.
-
-
+Default keymaps are defined [here](https://github.com/kitwtnb/inkdrop-intellij-for-mac/blob/master/keymaps/inkdrop-intellij-for-mac.json), and you can override them in your `keymap.cson` file.  
 You can check current keybindings on the *Keybindings* pane on preferences window:
 
 ![keybindings](./docs/keybindings.png)
-
-
 
 ## Install
 
