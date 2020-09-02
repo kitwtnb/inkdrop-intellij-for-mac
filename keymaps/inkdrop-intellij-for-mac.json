@@ -1,7 +1,6 @@
 {
     "body": {},
     ".CodeMirror textarea": {
-        "cmd-backspace": "editor:delete-line",
         "cmd-/": "editor:toggle-comment"
     }
 }
