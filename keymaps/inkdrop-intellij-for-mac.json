@@ -1,6 +1,6 @@
 {
     "body": {},
     ".CodeMirror textarea": {
-        "cmd-/": "editor:toggle-comment"
+        "cmd-/": "intellij:toggle-comment"
     }
 }
