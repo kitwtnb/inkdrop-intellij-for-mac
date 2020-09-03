@@ -1,3 +1,6 @@
+## 0.2.1
+* Optimize and bug fix.
+
 ## 0.2.0
 * Add keybinding for delete line.
 
