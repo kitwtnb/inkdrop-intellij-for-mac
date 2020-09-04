@@ -8,10 +8,11 @@ It's based on the [official key map](https://resources.jetbrains.com/storage/pro
 
 ### Editing
 
-| Keystroke | Command                 |                                     |
-|-----------|-------------------------|-------------------------------------|
-| ⌘ /       | intellij:toggle-comment | Comment/uncomment with line comment |
-| ⌘ ⌫       | intellij:delete-line    | Delete line at caret                |
+| Keystroke | Command                       |                                      |
+|-----------|-------------------------------|--------------------------------------|
+| ⌘ /       | intellij:toggle-comment       | Comment/uncomment with line comment  |
+| ⌘ ⌥ /     | intellij:toggle-block-comment | Comment/uncomment with block comment |
+| ⌘ ⌫       | intellij:delete-line          | Delete line at caret                 |
 
 ### Key customizations
 

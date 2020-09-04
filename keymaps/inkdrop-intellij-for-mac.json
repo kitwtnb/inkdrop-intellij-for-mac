@@ -2,6 +2,7 @@
     "body": {},
     ".CodeMirror textarea": {
         "cmd-/": "intellij:toggle-comment",
+        "cmd-alt-/": "intellij:toggle-block-comment",
         "cmd-backspace": "intellij:delete-line"
     }
 }

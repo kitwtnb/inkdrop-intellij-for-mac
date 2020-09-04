@@ -1,3 +1,6 @@
+## 0.3.0
+* Add keybinding for toggle block comment.
+
 ## 0.2.1
 * Optimize and bug fix.
 
