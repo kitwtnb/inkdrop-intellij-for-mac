@@ -9,5 +9,10 @@
     "engines": {
         "inkdrop": "^5.x"
     },
-    "dependencies": {}
+    "dependencies": {
+        "codemirror": "^5.57.0"
+    },
+    "devDependencies": {
+        "mocha": "^8.1.3"
+    }
 }
