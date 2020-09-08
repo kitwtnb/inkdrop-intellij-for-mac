@@ -2,8 +2,16 @@ const expect = chai.expect;
 
 describe('toggle-comment', () => {
     it("codemirror getValue", () => {
-        const cm = getCodeMirrorInstance();
-        cm.setValue("foo")
-        expect(cm.getValue()).equal("foo");
+        // setup
+        const cm = CodemirrorFactory.instance();
+        const cmc = CodemirrorClientFactory.instance(cm);
+        cm.setValue("");
+        cm.setCursor(0, 0);
+
+        // exercise
+        toggleComment(cmc);
+
+        // verify
+        expect("// ").equal(cm.getValue());
     });
 });
