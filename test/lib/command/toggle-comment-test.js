@@ -1,17 +1,18 @@
-const expect = chai.expect;
+describe("toggle-comment", () => {
+    const command = toggleComment;
 
-describe('toggle-comment', () => {
-    it("codemirror getValue", () => {
-        // setup
-        const cm = CodemirrorFactory.instance();
-        const cmc = CodemirrorClientFactory.instance(cm);
-        cm.setValue("");
-        cm.setCursor(0, 0);
+    describe("add comment", () => {
+        context("value is empty", () => {
+            const value = "";
 
-        // exercise
-        toggleComment(cmc);
-
-        // verify
-        expect("// ").equal(cm.getValue());
+            its(command, [
+                param(
+                    value,
+                    selection(cursor(0, 0), cursor(0, 0)),
+                    "// ",
+                    selection(cursor(0, 0), cursor(0, 0))
+                ),
+            ]);
+        });
     });
 });
