@@ -14,6 +14,9 @@ function its(command, params) {
 
             // verify
             expect(p.expectValue).equal(cm.getValue(), '`value` was wrong');
+
+            // teardown
+            cm.toTextArea();
         });
 
         it(`from "${JSON.stringify(p.initSelection.from)}" should be converted to "${JSON.stringify(p.expectSelection.from)}"`, () => {
@@ -29,6 +32,9 @@ function its(command, params) {
             // verify
             const area = cmc.selectedArea();
             expect(p.expectSelection.from).to.deep.equal(area.from, "`from` of the cursor was wrong");
+
+            // teardown
+            cm.toTextArea();
         });
 
         it(`to "${JSON.stringify(p.initSelection.to)}" should be converted to "${JSON.stringify(p.expectSelection.to)}"`, () => {
@@ -44,6 +50,9 @@ function its(command, params) {
             // verify
             const area = cmc.selectedArea();
             expect(p.expectSelection.to).to.deep.equal(area.to, "`to` of the cursor was wrong");
+
+            // teardown
+            cm.toTextArea();
         });
     });
 }
