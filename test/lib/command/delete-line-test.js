@@ -4,14 +4,7 @@ describe("delete-line", () => {
   context("value is a line", () => {
     const initSelection = selection(cursor(0, 0));
 
-    its(command, [
-      param(
-        "a",
-        initSelection,
-        "",
-        initSelection
-      ),
-    ]);
+    its(command, [param("a", initSelection, "", initSelection)]);
   });
 
   context("value is multi lines", () => {
@@ -39,7 +32,7 @@ describe("delete-line", () => {
       param(
         "aa\nbb\ncc",
         selection(cursor(0, 0), cursor(1, 0)),
-        "aa\ncc",
+        "bb\ncc",
         selection(cursor(0, 0))
       ),
       param(
