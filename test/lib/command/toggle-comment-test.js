@@ -99,12 +99,7 @@ describe("toggle-comment", () => {
   describe("remove comment", () => {
     context("value is a comment", () => {
       its(command, [
-        param(
-          "//",
-          selection(cursor(0, 0)),
-          "",
-          selection(cursor(0, 0))
-        ),
+        param("//", selection(cursor(0, 0)), "", selection(cursor(0, 0))),
       ]);
     });
 

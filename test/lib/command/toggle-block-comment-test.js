@@ -4,12 +4,7 @@ describe("toggle-block-comment", () => {
   describe("add comment block", () => {
     context("value is empty", () => {
       its(command, [
-        param(
-          "",
-          selection(cursor(0, 0)),
-          "/**/",
-          selection(cursor(0, 2))
-        ),
+        param("", selection(cursor(0, 0)), "/**/", selection(cursor(0, 2))),
       ]);
     });
 
@@ -86,7 +81,7 @@ describe("toggle-block-comment", () => {
         param(
           "aaa\nbbb",
           selection(cursor(1, 1), cursor(0, 2)),
-          "a/*aa\nbb*/b",
+          "aa/*a\nb*/bb",
           selection(cursor(1, 3), cursor(0, 2))
         ),
         param(
@@ -124,30 +119,10 @@ describe("toggle-block-comment", () => {
       const expectSelection = selection(cursor(0, 0));
 
       its(command, [
-        param(
-          initValue,
-          selection(cursor(0, 0)),
-          expectValue,
-          expectSelection
-        ),
-        param(
-          initValue,
-          selection(cursor(0, 1)),
-          expectValue,
-          expectSelection
-        ),
-        param(
-          initValue,
-          selection(cursor(0, 2)),
-          expectValue,
-          expectSelection
-        ),
-        param(
-          initValue,
-          selection(cursor(0, 3)),
-          expectValue,
-          expectSelection
-        ),
+        param(initValue, selection(cursor(0, 0)), expectValue, expectSelection),
+        param(initValue, selection(cursor(0, 1)), expectValue, expectSelection),
+        param(initValue, selection(cursor(0, 2)), expectValue, expectSelection),
+        param(initValue, selection(cursor(0, 3)), expectValue, expectSelection),
       ]);
     });
 

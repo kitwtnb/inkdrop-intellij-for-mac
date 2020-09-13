@@ -8,7 +8,7 @@ function param(initValue, initSelection, expectValue, expectSelection) {
 }
 
 function selection(from, to) {
-  const t = (to === undefined || to === null) ? from : to;
+  const t = to === undefined || to === null ? from : to;
 
   return {
     from: from,
