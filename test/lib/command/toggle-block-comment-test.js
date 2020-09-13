@@ -6,9 +6,9 @@ describe("toggle-block-comment", () => {
       its(command, [
         param(
           "",
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "/**/",
-          selection(cursor(0, 2), cursor(0, 2))
+          selection(cursor(0, 2))
         ),
       ]);
     });
@@ -19,15 +19,15 @@ describe("toggle-block-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "/**/a\n",
-          selection(cursor(0, 2), cursor(0, 2))
+          selection(cursor(0, 2))
         ),
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           "a/**/\n",
-          selection(cursor(0, 3), cursor(0, 3))
+          selection(cursor(0, 3))
         ),
         param(
           initValue,
@@ -56,9 +56,9 @@ describe("toggle-block-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           "a/**/a\n",
-          selection(cursor(0, 3), cursor(0, 3))
+          selection(cursor(0, 3))
         ),
         param(
           initValue,
@@ -91,21 +91,21 @@ describe("toggle-block-comment", () => {
         ),
         param(
           "/*a*/\nb\n/*c*/",
-          selection(cursor(0, 5), cursor(0, 5)),
+          selection(cursor(0, 5)),
           "/*a*//**/\nb\n/*c*/",
-          selection(cursor(0, 7), cursor(0, 7))
+          selection(cursor(0, 7))
         ),
         param(
           "/*a*/\nb\n/*c*/",
-          selection(cursor(1, 0), cursor(1, 0)),
+          selection(cursor(1, 0)),
           "/*a*/\n/**/b\n/*c*/",
-          selection(cursor(1, 2), cursor(1, 2))
+          selection(cursor(1, 2))
         ),
         param(
           "/*a*/\nb\n/*c*/",
-          selection(cursor(1, 1), cursor(1, 1)),
+          selection(cursor(1, 1)),
           "/*a*/\nb/**/\n/*c*/",
-          selection(cursor(1, 3), cursor(1, 3))
+          selection(cursor(1, 3))
         ),
         param(
           "/*a*/\nb\n/*c*/",
@@ -121,30 +121,30 @@ describe("toggle-block-comment", () => {
     context("value is a comment block", () => {
       const initValue = "/**/";
       const expectValue = "";
-      const expectSelection = selection(cursor(0, 0), cursor(0, 0));
+      const expectSelection = selection(cursor(0, 0));
 
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           expectValue,
           expectSelection
         ),
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           expectValue,
           expectSelection
         ),
         param(
           initValue,
-          selection(cursor(0, 2), cursor(0, 2)),
+          selection(cursor(0, 2)),
           expectValue,
           expectSelection
         ),
         param(
           initValue,
-          selection(cursor(0, 3), cursor(0, 3)),
+          selection(cursor(0, 3)),
           expectValue,
           expectSelection
         ),
@@ -158,33 +158,33 @@ describe("toggle-block-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 2), cursor(0, 2)),
+          selection(cursor(0, 2)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 3), cursor(0, 3)),
+          selection(cursor(0, 3)),
           expectValue,
-          selection(cursor(0, 1), cursor(0, 1))
+          selection(cursor(0, 1))
         ),
         param(
           initValue,
-          selection(cursor(0, 4), cursor(0, 4)),
+          selection(cursor(0, 4)),
           expectValue,
-          selection(cursor(0, 1), cursor(0, 1))
+          selection(cursor(0, 1))
         ),
       ]);
     });
@@ -193,33 +193,33 @@ describe("toggle-block-comment", () => {
       its(command, [
         param(
           "/*\na\n*/",
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "a",
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           "/*\na\n*/",
-          selection(cursor(0, 2), cursor(0, 2)),
+          selection(cursor(0, 2)),
           "a",
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           "/*\na\n*/",
-          selection(cursor(1, 0), cursor(1, 0)),
+          selection(cursor(1, 0)),
           "a",
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           "/*\na\n*/",
-          selection(cursor(1, 1), cursor(1, 1)),
+          selection(cursor(1, 1)),
           "a",
-          selection(cursor(0, 1), cursor(0, 1))
+          selection(cursor(0, 1))
         ),
         param(
           "/*\na\n*/",
-          selection(cursor(2, 0), cursor(2, 0)),
+          selection(cursor(2, 0)),
           "a",
-          selection(cursor(1, 0), cursor(1, 0))
+          selection(cursor(1, 0))
         ),
       ]);
     });

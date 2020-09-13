@@ -4,7 +4,7 @@ describe("toggle-comment", () => {
   describe("add comment", () => {
     context("value is empty", () => {
       const initValue = "";
-      const initSelection = selection(cursor(0, 0), cursor(0, 0));
+      const initSelection = selection(cursor(0, 0));
 
       its(command, [param(initValue, initSelection, initValue, initSelection)]);
     });
@@ -16,15 +16,15 @@ describe("toggle-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           expectValue,
-          selection(cursor(0, 4), cursor(0, 4))
+          selection(cursor(0, 4))
         ),
         param(
           initValue,
@@ -47,15 +47,15 @@ describe("toggle-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "// a\nbbbbb",
-          selection(cursor(1, 0), cursor(1, 0))
+          selection(cursor(1, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 1), cursor(0, 1)),
+          selection(cursor(0, 1)),
           "// a\nbbbbb",
-          selection(cursor(1, 4), cursor(1, 4))
+          selection(cursor(1, 4))
         ),
         param(
           initValue,
@@ -101,9 +101,9 @@ describe("toggle-comment", () => {
       its(command, [
         param(
           "//",
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "",
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
       ]);
     });
@@ -115,21 +115,21 @@ describe("toggle-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 2), cursor(0, 2)),
+          selection(cursor(0, 2)),
           expectValue,
-          selection(cursor(0, 0), cursor(0, 0))
+          selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 3), cursor(0, 3)),
+          selection(cursor(0, 3)),
           expectValue,
-          selection(cursor(0, 1), cursor(0, 1))
+          selection(cursor(0, 1))
         ),
         param(
           initValue,
@@ -152,21 +152,21 @@ describe("toggle-comment", () => {
       its(command, [
         param(
           initValue,
-          selection(cursor(0, 0), cursor(0, 0)),
+          selection(cursor(0, 0)),
           "aaa\n// bbb",
-          selection(cursor(1, 0), cursor(1, 0))
+          selection(cursor(1, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 4), cursor(0, 4)),
+          selection(cursor(0, 4)),
           "aaa\n// bbb",
-          selection(cursor(1, 1), cursor(1, 1))
+          selection(cursor(1, 1))
         ),
         param(
           initValue,
           selection(cursor(0, 0), cursor(1, 0)),
           "aaa\n// bbb",
-          selection(cursor(1, 0), cursor(1, 0))
+          selection(cursor(1, 0))
         ),
         param(
           initValue,
