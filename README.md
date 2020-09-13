@@ -26,3 +26,6 @@ You can check current keybindings on the *Keybindings* pane on preferences windo
 ```sh
 $ ipm install intellij-keybindings-for-mac
 ```
+
+## Change Log
+[CHANGELOG.md](https://github.com/kitwtnb/inkdrop-intellij-for-mac/blob/master/CHANGELOG.md)
