@@ -3,15 +3,15 @@ const expect = chai.expect;
 function its(command, params) {
   params.forEach((p) => {
     context(
-      `value: "${p.initValue.replace("\n", "'\\n'")}", from: "${JSON.stringify(
+      `value: "${p.initValue.replace(/\n/g, "'\\n'")}", from: "${JSON.stringify(
         p.initSelection.from
       )}", to: "${JSON.stringify(p.initSelection.to)}"`,
       () => {
         it(`value "${p.initValue.replace(
-          "\n",
+          /\n/g,
           "'\\n'"
         )}" should be converted to "${p.expectValue.replace(
-          "\n",
+          /\n/g,
           "'\\n'"
         )}"`, () => {
           // setup
