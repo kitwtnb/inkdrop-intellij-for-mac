@@ -28,7 +28,7 @@ describe("toggle-block-comment", () => {
           initValue,
           selection(cursor(0, 0), cursor(0, 1)),
           "/*a*/\n",
-          selection(cursor(0, 5), cursor(0, 0))
+          selection(cursor(0, 0), cursor(0, 5))
         ),
         param(
           initValue,
@@ -194,7 +194,7 @@ describe("toggle-block-comment", () => {
           "/*\na\n*/",
           selection(cursor(2, 0)),
           "a",
-          selection(cursor(1, 0))
+          selection(cursor(0, 1))
         ),
       ]);
     });
