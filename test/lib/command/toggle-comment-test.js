@@ -104,7 +104,7 @@ describe("toggle-comment", () => {
     });
 
     context("value is comment and character", () => {
-      const initValue = "//a";
+      const initValue = "// a";
       const expectValue = "a";
 
       its(command, [
@@ -116,25 +116,25 @@ describe("toggle-comment", () => {
         ),
         param(
           initValue,
-          selection(cursor(0, 2)),
+          selection(cursor(0, 3)),
           expectValue,
           selection(cursor(0, 0))
         ),
         param(
           initValue,
-          selection(cursor(0, 3)),
+          selection(cursor(0, 4)),
           expectValue,
           selection(cursor(0, 1))
         ),
         param(
           initValue,
-          selection(cursor(0, 2), cursor(0, 3)),
+          selection(cursor(0, 3), cursor(0, 4)),
           expectValue,
           selection(cursor(0, 0), cursor(0, 1))
         ),
         param(
           initValue,
-          selection(cursor(0, 3), cursor(0, 2)),
+          selection(cursor(0, 4), cursor(0, 3)),
           expectValue,
           selection(cursor(0, 1), cursor(0, 0))
         ),
@@ -161,7 +161,7 @@ describe("toggle-comment", () => {
           initValue,
           selection(cursor(0, 0), cursor(1, 0)),
           "aaa\n// bbb",
-          selection(cursor(1, 0))
+          selection(cursor(0, 0), cursor(1, 0))
         ),
         param(
           initValue,
