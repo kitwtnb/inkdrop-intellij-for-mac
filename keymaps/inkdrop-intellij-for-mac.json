@@ -3,6 +3,7 @@
     ".CodeMirror textarea": {
         "cmd-/": "intellij:toggle-comment",
         "cmd-alt-/": "intellij:toggle-block-comment",
+        "cmd-d": "intellij:duplicate-current-line",
         "cmd-backspace": "intellij:delete-line"
     }
 }
