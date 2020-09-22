@@ -65,7 +65,7 @@ describe("duplicate-current-line", () => {
         param(
           initValue,
           selection(cursor(0, 0), cursor(1, 0)),
-          "aabc\nabc\ndef",
+          "abc\nabc\ndef",
           selection(cursor(1, 0), cursor(2, 0))
         ),
         param(
