@@ -1,3 +1,6 @@
+## 0.4.0
+* Add keybinding for duplicate current line.
+
 ## 0.3.2
 * Fixed some bugs.
 
