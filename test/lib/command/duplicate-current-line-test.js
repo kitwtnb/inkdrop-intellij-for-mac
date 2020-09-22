@@ -30,13 +30,7 @@ describe("duplicate-current-line", () => {
           selection(cursor(0, 0), cursor(0, 1)),
           "aa",
           selection(cursor(0, 1), cursor(0, 2))
-        ),
-        param(
-          initValue,
-          selection(cursor(0, 1), cursor(0, 0)),
-          "aa",
-          selection(cursor(0, 1), cursor(0, 2))
-        ),
+        )
       ]);
     });
 
